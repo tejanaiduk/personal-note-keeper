@@ -1,6 +1,6 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { Feather, MailCheck } from "lucide-react";
-import { useEffect, useState, type FormEvent } from "react";
+import { useEffect, useState, type ComponentProps, type FormEvent } from "react";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
@@ -161,7 +161,7 @@ function Field({
   label,
   hint,
   ...props
-}: { id: string; label: string; hint?: string } & React.ComponentProps<typeof Input>) {
+}: { id: string; label: string; hint?: string } & ComponentProps<typeof Input>) {
   return (
     <div className="space-y-1.5">
       <Label htmlFor={id}>{label}</Label>

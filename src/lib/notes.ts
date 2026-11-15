@@ -26,7 +26,7 @@ export async function fetchDisplayName(userId: string): Promise<string | null> {
   return data?.display_name ?? null;
 }
 
-export async function saveNote(input: { id?: string; title: string; body: string }): Promise<Note> {
+export async function saveNote(input: { id: string | undefined; title: string; body: string }): Promise<Note> {
   const values = { title: input.title.trim(), body: input.body };
   const query = input.id
     ? supabase.from("notes").update(values).eq("id", input.id)

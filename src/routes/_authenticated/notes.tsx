@@ -64,7 +64,7 @@ function NotesPage() {
   // On wide screens, open the most recent note by default.
   useEffect(() => {
     if (selected === null && notes.length > 0 && window.matchMedia("(min-width: 768px)").matches) {
-      setSelected(notes[0].id);
+      setSelected(notes[0]!.id);
     }
   }, [notes, selected]);
 
@@ -188,7 +188,7 @@ function NoteEditor({
   onSaved,
   onDeleted,
 }: {
-  note?: Note;
+  note: Note | undefined;
   onDirtyChange: (dirty: boolean) => void;
   onBack: () => void;
   onSaved: (note: Note) => void;

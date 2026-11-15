@@ -289,7 +289,7 @@ function NoteEditor({
         value={body}
         onChange={(e) => setBody(e.target.value)}
         placeholder="Start writing…"
-        className="ruled mt-4 w-full flex-1 resize-none bg-transparent text-base outline-none placeholder:text-muted-foreground/60"
+        className="ruled mt-4 w-full flex-1 resize-none bg-transparent text-base/8 outline-none placeholder:text-muted-foreground/60"
         rows={14}
       />
     </form>

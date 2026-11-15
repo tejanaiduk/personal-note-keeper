@@ -80,7 +80,7 @@ function Index() {
           <div className="sheet relative -rotate-2 p-8">
             <p className="font-display text-3xl">Sunday plans</p>
             <p className="mt-1 text-xs uppercase tracking-widest text-muted-foreground">Nov 15</p>
-            <div className="ruled mt-4 text-base text-foreground/80">
+            <div className="ruled mt-4 text-base/8 text-foreground/80">
               <p>— farmers market before 10</p>
               <p>— call grandma</p>
               <p>— finish the chapter on tides</p>

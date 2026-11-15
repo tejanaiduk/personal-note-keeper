@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- Notes and profiles are read/written from the browser with the generated Supabase client; row-level security scoped to `auth.uid()` is the only access control, so every new user-data table needs owner-scoped policies.
+- Signed-in pages live under `src/routes/_authenticated/` (client-only gate redirecting to `/auth`); public pages stay top-level.
